@@ -31,11 +31,18 @@ Counter >> decrement [
 
 { #category : #accessing }
 Counter >> increment [ 
-	count := count + 1
+	count := count + count
 ]
 
 { #category : #accessing }
 Counter >> initialize [ 
 	super initialize.
 	count := 0
+]
+
+{ #category : #accessing }
+Counter >> printOn: aStream [
+	super printOn: aStream.
+	aStream nextPutAll: ' withValue: ', count printString.
+	aStream cr 
 ]
