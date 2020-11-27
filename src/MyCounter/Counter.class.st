@@ -31,7 +31,7 @@ Counter >> decrement [
 
 { #category : #accessing }
 Counter >> increment [ 
-	count := count + count
+	count := count + 1
 ]
 
 { #category : #accessing }
